@@ -29,9 +29,13 @@ class SignUpFormBase extends Component {
   onSubmit = event => {
     const { username, email, passwordOne } = this.state;
 
+    console.log('WE ARE IN THE ON SUBMIT!!!')
+
     this.props.firebase
       .doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(authUser => {
+        console.log('WE GOT THIS BACK FROM FIREBASE!!', authUser);
+        this.props.history.push(ROUTES.HOME);
         // Create a user in your Firebase realtime database
         this.props.firebase
           .user(authUser.user.uid)
@@ -40,8 +44,12 @@ class SignUpFormBase extends Component {
             email,
           })
           .then(() => {
-            this.setState({ ...INITIAL_STATE });
-            this.props.history.push(ROUTES.HOME);
+            console.log('IN THE .then!!! after seting user name and email!!!')
+            this.setState({ ...INITIAL_STATE }, function() {
+              console.log('INSIDE THE .then', ROUTES.HOME)
+              this.props.history.push(ROUTES.HOME);
+            });
+            
           })
           .catch(error => {
             this.setState({ error });
@@ -103,9 +111,11 @@ class SignUpFormBase extends Component {
           type="password"
           placeholder="Confirm Password"
         />
-        <button disabled={isInvalid} type="submit">
+        {/* <Link to ={"/Home"}> */}
+        <button disabled={isInvalid} type="submit" >
           Sign Up
         </button>
+        {/* </Link> */}
 
         {error && <p>{error.message}</p>}
       </form>

@@ -4,8 +4,8 @@ import { withAuthorization } from '../Session';
 
 const HomePage = () => (
   <div>
-    <h2>Home Page</h2>
-    <p>The Home Page is accessible by every signed in user.</p>
+    <h2>Welcome to WonderBooks!</h2>
+    <h4>The #1 site for educational children interactive modules, stories, and more!</h4>
   </div>
 );
 

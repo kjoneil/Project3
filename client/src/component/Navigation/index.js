@@ -19,15 +19,9 @@ const Navigation = () => (
 const NavigationAuth = () => (
   <ul>
     <li>
-      <Link to={ROUTES.HOME}>Home</Link>
-    </li>
-    <li>
-      <Link to={ROUTES.ACCOUNT}>Account</Link>
-    </li>
-    <li>
-      <Link to={ROUTES.ADMIN}>Admin</Link>
-    </li>
-    <li>
+      <Link to={ROUTES.HOME}>Home </Link>
+      <Link to={ROUTES.ACCOUNT}>Account </Link>
+      <Link to={ROUTES.ADMIN}>Admin </Link>
       <SignOutButton />
     </li>
   </ul>
