@@ -9,11 +9,7 @@ import * as ROUTES from '../../constants/routes';
 
 const SignInPage = () => (
   <div>
-<<<<<<< HEAD
-    <h1>WonderBooks Login</h1>
-=======
     <h2>SignIn</h2>
->>>>>>> 620d37b0586498ff695096f76d1d63ffeef93576
     <SignInForm />
     <PasswordForgetLink />
     <SignUpLink />
