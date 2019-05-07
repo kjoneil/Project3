@@ -4,12 +4,8 @@ import { withAuthorization } from '../Session';
 
 const HomePage = () => (
   <div>
-    <h1>Home Page</h1>
-    <div>
-      <img src= "image1.jpg" alt="dots"></img>
-    </div>
-      
-    
+    <h2>Home Page</h2>
+    <p>The Home Page is accessible by every signed in user.</p>
   </div>
 );
 
