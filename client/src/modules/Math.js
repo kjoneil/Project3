@@ -1,11 +1,9 @@
 import React from "react";
-// import Model1 from "../../modules/quiz";
-import {Button} from 'reactstrap';
-import { withAuthorization } from "../Session";
-import { Link, withRouter } from "react-router-dom";
+import Model1 from "./quiz.js";
+import { withAuthorization } from "../component/Session/index.js";
 // import builtinModules from "../modules/modules";
 
-const HomePage = () => {
+const MathPage = () => {
   var mathQuestions = [
     {
       questionUrl:
@@ -29,19 +27,11 @@ const HomePage = () => {
 
   return (
     <div>
-      <h2>Home Page</h2>
-      {/* <Model1 questions={mathQuestions} /> */}
-      <p>The Home Page is accessible by every signed in user.</p>
-
-      <Link to="/math">
-        <Button color="danger" size="lg" block>Math Quiz</Button>{' '}
-      </Link>
-      <Link to="/reading">
-        <Button color="success" size="lg" block>Reading Quiz</Button>
-      </Link>
+      <h2>MATH QUIZ TIME!!!</h2>
+      <Model1 questions={mathQuestions} />
     </div>
   );
 };
 const condition = authUser => !!authUser;
 
-export default withAuthorization(condition)(HomePage);
+export default withAuthorization(condition)(MathPage);
