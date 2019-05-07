@@ -1,17 +1,21 @@
-import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import Navigation from '../Navigation';
-import LandingPage from '../Landing';
-import SignUpPage from '../SignUp';
-import SignInPage from '../SignIn';
-import PasswordForgetPage from '../PasswordForget';
-import HomePage from '../Home';
-import AccountPage from '../Account';
-import AdminPage from '../Admin';
+import Title from "../Title";
+import Navigation from "../Navigation";
+import LandingPage from "../Landing";
+import SignUpPage from "../SignUp";
+import SignInPage from "../SignIn";
+import PasswordForgetPage from "../PasswordForget";
+import HomePage from "../Home";
+import AccountPage from "../Account";
+import AdminPage from "../Admin";
 
-import * as ROUTES from '../../constants/routes';
-import { withAuthentication } from '../Session';
+import MathPage from "../../modules/Math.js";
+import Reading from "../../modules/Reading.js";
+
+import * as ROUTES from "../../constants/routes";
+import { withAuthentication } from "../Session";
 
 const App = () => (
   <Router>
@@ -19,6 +23,12 @@ const App = () => (
       <Navigation />
 
       <hr />
+
+      <Title />
+
+      <hr />
+      <Route exact path={"/math"} component={MathPage} />
+      <Route exact path={"/reading"} component={Reading} />
 
       <Route exact path={ROUTES.LANDING} component={LandingPage} />
       <Route exact path={ROUTES.SIGN_UP} component={SignUpPage} />
