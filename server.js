@@ -27,9 +27,9 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-// mongoose.connect(
-//   process.env.MONGODB_URI ||"mongodb://tomtomtom:123456tom@ds145146.mlab.com:45146/heroku_ml83mqkl"
-// )
+mongoose.connect(
+  process.env.MONGODB_URI ||"mongodb://tomtomtom:123456tom@ds145146.mlab.com:45146/heroku_ml83mqkl"
+)
 // mongoose.connect(
 //     process.env.MONGODB_URI ||"mongodb:"
 //   )
