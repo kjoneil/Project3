@@ -4,9 +4,9 @@ import update from "immutability-helper";
 
 class Quiz extends Component {
   state = {
-    q1: this.props.questions[0],
+    // q1: this.props.questions[0],
     q2: this.props.questions[1],
-    q3: this.props.questions[2]
+    // q3: this.props.questions[2]
   };
   handleRadioClick = (value, choiceNum, questionNum) => {
     console.log("this is our click!!", value);
@@ -16,6 +16,7 @@ class Quiz extends Component {
     const answer = this.state[questionNum].answer;
     const choices = this.state[questionNum].choices;
     const questionUrl = this.state[questionNum].questionUrl;
+    // const description = this.state[questionNum].description;
     this.setState({
       [questionNum]: {
         selectedAnswer: value,
@@ -23,6 +24,7 @@ class Quiz extends Component {
         answer,
         choices,
         questionUrl
+        // description
       }
     });
   };
@@ -40,6 +42,7 @@ class Quiz extends Component {
           {self.state[key].choices.map((singleChoice, i) => {
             return (
               <div>
+                {/* <h3>{description}</h3> */}
                 <input
                   type="radio"
                   value={singleChoice}

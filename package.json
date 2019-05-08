@@ -28,5 +28,14 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "reactstrap": "^8.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kjoneil/Project3.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/kjoneil/Project3/issues"
+  },
+  "homepage": "https://github.com/kjoneil/Project3#readme"
 }

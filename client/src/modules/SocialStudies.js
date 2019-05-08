@@ -3,8 +3,8 @@ import Quiz from "./quiz.js";
 import { withAuthorization } from "../component/Session/index.js";
 // import builtinModules from "../modules/modules";
 
-const ReadingPage = () => {
-  var readingQuestions = [
+const SocialStudies = () => {
+  var socialStudiesQuestions = [
     {
       questionUrl:
         "https://www.teachstarter.com/wp-content/uploads/2016/08/8.1.png",
@@ -33,12 +33,11 @@ const ReadingPage = () => {
 
   return (
     <div>
-      <h2>Brain Teasers!</h2>
-      <p>How many triangles are in the image below?</p>
-      <Quiz questions={readingQuestions} />
+      <h2>Social Studies</h2>
+      <Quiz questions={socialStudiesQuestions} />
     </div>
   );
 };
 const condition = authUser => !!authUser;
 
-export default withAuthorization(condition)(ReadingPage);
+export default withAuthorization(condition)(SocialStudies);

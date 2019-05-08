@@ -5,6 +5,15 @@ import { withAuthorization } from "../component/Session/index.js";
 
 const MathPage = () => {
   var mathQuestions = [
+    
+    {
+      questionUrl:
+        "https://www.teachstarter.com/wp-content/uploads/2016/08/9.1.png",
+      description: "try your hardest",
+
+      answer: 44,
+      choices: [55, 44, 33, 22]
+    },
     {
       questionUrl:
         "https://www.teachstarter.com/wp-content/uploads/2016/08/3.1.png",
@@ -13,13 +22,9 @@ const MathPage = () => {
     },
     {
       questionUrl:
-        "https://www.teachstarter.com/wp-content/uploads/2016/08/9.1.png",
-      answer: 44,
-      choices: [55, 44, 33, 22]
-    },
-    {
-      questionUrl:
         "https://www.teachstarter.com/wp-content/uploads/2016/08/1.1.png",
+      description: "try your hardest",
+
       answer: "C",
       choices: ["A", "B", "C", "D"]
     }
@@ -27,7 +32,8 @@ const MathPage = () => {
 
   return (
     <div>
-      <h2>MATH QUIZ TIME!!!</h2>
+      <h2>Brainteaser!</h2>
+      <p>How many Blocks are there in this Picture?</p>
       <Model1 questions={mathQuestions} />
     </div>
   );
