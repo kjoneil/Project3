@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Button, CardTitle, CardText } from 'reactstrap';
-import logo from './noon-good.jpg';
-import photo from './line-read-line.jpg';
+import logo from '../component/Landing/noon-good.jpg';
+import photo from '../component/Landing/line-read-line.jpg';
 
 
 const Example = (props) => {

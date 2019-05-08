@@ -13,6 +13,7 @@ import AdminPage from "../Admin";
 
 import MathPage from "../../modules/Math.js";
 import Reading from "../../modules/Reading.js";
+import Wuzzle from "../../modules/Wuzzle.js";
 
 import * as ROUTES from "../../constants/routes";
 import { withAuthentication } from "../Session";
@@ -29,6 +30,8 @@ const App = () => (
       <hr />
       <Route exact path={"/math"} component={MathPage} />
       <Route exact path={"/reading"} component={Reading} />
+      <Route exact path={"/landing"} component={Wuzzle} />
+
 
       <Route exact path={ROUTES.LANDING} component={LandingPage} />
       <Route exact path={ROUTES.SIGN_UP} component={SignUpPage} />
