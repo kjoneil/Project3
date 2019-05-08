@@ -1,6 +1,6 @@
 import React from "react";
 // import Model1 from "../../modules/quiz";
-import {Button} from 'reactstrap';
+import { Button } from "reactstrap";
 import { withAuthorization } from "../Session";
 import { Link, withRouter } from "react-router-dom";
 // import builtinModules from "../modules/modules";
@@ -34,10 +34,19 @@ const HomePage = () => {
       <p>The Home Page is accessible by every signed in user.</p>
 
       <Link to="/math">
-        <Button color="danger" size="lg" block>Math Quiz</Button>{' '}
+        <Button color="danger" size="lg" block>
+          Math Quiz
+        </Button>{" "}
       </Link>
       <Link to="/reading">
-        <Button color="success" size="lg" block>Reading Quiz</Button>
+        <Button color="success" size="lg" block>
+          Reading
+        </Button>
+      </Link>
+      <Link to="/socialStudies">
+        <Button color="warning" size="lg" block>
+          Social Studies
+        </Button>
       </Link>
     </div>
   );
