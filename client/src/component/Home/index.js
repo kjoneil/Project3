@@ -48,6 +48,11 @@ const HomePage = () => {
           Social Studies
         </Button>
       </Link>
+      <Link to="/comment">
+        <Button color="dark" size="lg" block>
+          Leave a comment
+        </Button>
+      </Link>
     </div>
   );
 };

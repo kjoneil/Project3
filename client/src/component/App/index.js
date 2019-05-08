@@ -10,7 +10,6 @@ import PasswordForgetPage from "../PasswordForget";
 import HomePage from "../Home";
 import AccountPage from "../Account";
 import AdminPage from "../Admin";
-
 import MathPage from "../../modules/Math.js";
 import Reading from "../../modules/Reading.js";
 import SocialStudies from "../../modules/SocialStudies.js";
