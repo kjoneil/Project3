@@ -18,14 +18,18 @@ const Example = props => {
           <img src={logo} alt="wuzzle" />
           <CardText>Hint: It's similar to saying hello. </CardText>
         </Card>
+        <br />
         <Card body inverse color="danger">
           <CardTitle>Wuzzle #2</CardTitle>
           <img src={photo} alt="wuzzle2" />
           <CardText>Hint: Think between the lines.</CardText>
         </Card>{" "}
       </div>
+      <br />
+      <br />
       <div>
         <h6>Answers</h6>
+        <br />
         <p>Wuzzle #1: Good AfterNoon</p>
         <p>Wuzzle #2: Read Between the lines</p>
       </div>
