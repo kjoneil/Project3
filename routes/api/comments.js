@@ -1,15 +1,15 @@
 const router = require("express").Router();
-const modulesController = require("../../controllers/modulesController");
+const commentsController = require("../../controllers/commentsController");
 
 // Matches with "/api/books"
 router.route("/")
-  .get(modulesController.findAll)
-  .post(modulesController.create);
+  // .get(modulesController.findAll)
+  .post(commentsController.create);
 
 // Matches with "/api/books/:id"
 router
   .route("/:id")
-  .get(modulesController.findById)
+  .get(commentsController.findById)
   // .put(modulesController.update)
   // .delete(modulesController.remove);
 
