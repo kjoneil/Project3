@@ -16,6 +16,7 @@ class Quiz extends Component {
     const answer = this.state[questionNum].answer;
     const choices = this.state[questionNum].choices;
     const questionUrl = this.state[questionNum].questionUrl;
+    // const description = this.state[questionNum].description;
     this.setState({
       [questionNum]: {
         selectedAnswer: value,
@@ -23,6 +24,7 @@ class Quiz extends Component {
         answer,
         choices,
         questionUrl
+        // description
       }
     });
   };
@@ -40,6 +42,7 @@ class Quiz extends Component {
           {self.state[key].choices.map((singleChoice, i) => {
             return (
               <div>
+                {/* <h3>{description}</h3> */}
                 <input
                   type="radio"
                   value={singleChoice}
