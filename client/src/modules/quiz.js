@@ -5,7 +5,7 @@ import update from "immutability-helper";
 class Quiz extends Component {
   state = {
     // q1: this.props.questions[0],
-    q2: this.props.questions[1],
+    q2: this.props.questions[1]
     // q3: this.props.questions[2]
   };
   handleRadioClick = (value, choiceNum, questionNum) => {
@@ -42,8 +42,9 @@ class Quiz extends Component {
           {self.state[key].choices.map((singleChoice, i) => {
             return (
               <div>
+                <br />
                 {/* <h3>{description}</h3> */}
-                <input
+                {/* <input
                   type="radio"
                   value={singleChoice}
                   // checked={this.state.question1.selectedOption === "option2"}
@@ -51,7 +52,7 @@ class Quiz extends Component {
                     self.handleRadioClick(singleChoice, i, key);
                   }}
                 />
-                {singleChoice}
+                {singleChoice} */}
               </div>
             );
           })}
