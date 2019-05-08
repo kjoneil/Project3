@@ -4,7 +4,7 @@ import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import {AuthUserContext, withAuthorization} from '../Session';
 import { PasswordForgetForm } from '../PasswordForget';
 import PasswordChangeForm from '../PasswordChange';
-import {Comments} from '../wuzzles';
+import Comments from '../wuzzles/index.js';
 
 const AccountPage = () => (
   <AuthUserContext.Consumer>
