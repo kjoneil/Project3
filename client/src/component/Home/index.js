@@ -29,24 +29,18 @@ const HomePage = () => {
 
   return (
     <div>
-      <h2>Home Page</h2>
+      <h2>Fun Activities.</h2>
       {/* <Model1 questions={mathQuestions} /> */}
-      <p>The Home Page is accessible by every signed in user.</p>
+      <p>Explore</p>
 
       <Link to="/math">
-        <Button color="danger" size="lg" block>
-          Math Quiz
-        </Button>{" "}
+        <Button color="primary" size="lg" block><h2>BrainTeaser</h2></Button>{' '}
       </Link>
       <Link to="/reading">
-        <Button color="success" size="lg" block>
-          Reading
-        </Button>
-      </Link>
-      <Link to="/socialStudies">
-        <Button color="warning" size="lg" block>
-          Social Studies
-        </Button>
+        <Button color="danger" size="lg" block><h2>BrainTeaser</h2></Button>
+      </Link>{' '}
+      <Link to="/landing">
+        <Button color="success" size="lg" block><h2>Wuzzles</h2></Button>
       </Link>
     </div>
   );

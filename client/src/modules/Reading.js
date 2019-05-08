@@ -33,7 +33,8 @@ const ReadingPage = () => {
 
   return (
     <div>
-      <h2>Reading QUIZ TIME!!!</h2>
+      <h2>Brain Teasers!</h2>
+      <p>How many triangles are in the image below?</p>
       <Quiz questions={readingQuestions} />
     </div>
   );
