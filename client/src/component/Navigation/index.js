@@ -20,19 +20,21 @@ const NavigationAuth = () => (
       <Link to={ROUTES.LANDING}>Landing</Link>
     </li> */}
     <li>
-      <Link to={ROUTES.HOME}>Home</Link>
-    </li>
-    <li>
-      <Link to={ROUTES.ACCOUNT}>Account</Link>
+      <Link to={ROUTES.HOME}>Home </Link>
+      <Link to={ROUTES.ACCOUNT}>Account </Link>
+    <SignOutButton />
     </li>
     {/* <li>
       <Link to={ROUTES.ADMIN}>Admin</Link>
     </li> */}
-    <li>
-      <SignOutButton />
-    </li>
   </ul>
 );
+
+// const NavigationPretty = () => (
+//   <ButtonToolbar>
+//     <Button variant="link">Link</Button>
+//   </ButtonToolbar>
+// );
 
 const NavigationNonAuth = () => (
   <ul>
