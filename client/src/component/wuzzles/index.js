@@ -14,7 +14,7 @@ this.setState({comment: event.target.value})
 
 saveComment = () => {
 
-  Axios.post('http://localhost:3001/saveComment', {comment: this.state.comment}).then((data) => {
+  Axios.post('/saveComment', {comment: this.state.comment}).then((data) => {
 console.log('we got this back from backedn!!', data);
   })
 
