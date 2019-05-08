@@ -5,7 +5,6 @@ import { withAuthorization } from "../component/Session/index.js";
 
 const MathPage = () => {
   var mathQuestions = [
-    
     {
       questionUrl:
         "https://www.teachstarter.com/wp-content/uploads/2016/08/9.1.png",
@@ -35,6 +34,11 @@ const MathPage = () => {
       <h2>Brainteaser!</h2>
       <p>How many Blocks are there in this Picture?</p>
       <Model1 questions={mathQuestions} />
+      <br />
+      <div>
+        <h6>Answer</h6>
+        <p>9</p>
+      </div>
     </div>
   );
 };
