@@ -42,7 +42,6 @@ class Quiz extends Component {
           {self.state[key].choices.map((singleChoice, i) => {
             return (
               <div>
-                <br />
                 {/* <h3>{description}</h3> */}
                 {/* <input
                   type="radio"
@@ -65,12 +64,7 @@ class Quiz extends Component {
 
   render() {
     console.log("THIS IS OUR STATE!!!", this.state);
-    return (
-      <div>
-        <h2>Modules</h2>
-        {this.createQuestions()}
-      </div>
-    );
+    return <div>{this.createQuestions()}</div>;
   }
 }
 export default Quiz;

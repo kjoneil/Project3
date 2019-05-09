@@ -1,0 +1,27 @@
+#someElement {
+  border: 1px pink;
+  display: none;
+  font-size: 40px;
+  /* margin-top: 2px; */
+  /* padding: 2px; */
+  text-transform: uppercase;
+  /* size: 20px; */
+  color: greenyellow;
+  /* size: 30 px; */
+}
+
+#someDiv:hover #someElement {
+  display: block;
+}
+#Answer {
+  font-size: 40 px;
+  color: white;
+  margin-top: 4mm;
+  font-weight: bold;
+}
+.card {
+  width: 80%;
+  height: 18vw;
+  padding-left: 60 px;
+  margin-left: 25%;
+}

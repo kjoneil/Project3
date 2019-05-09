@@ -1,0 +1,12 @@
+.card {
+  width: 80%;
+  height: 15vw;
+  padding-left: 60 px;
+  margin-left: 25%;
+}
+.wuzzleCards {
+  width: 70%;
+  padding-left: 100 px;
+  color: green;
+  margin-left: 25%;
+}

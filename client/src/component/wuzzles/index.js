@@ -36,58 +36,61 @@
 //         </Form>
 
 //         <button onClick={this.saveComment} >Save</button>
-//        </div> 
+//        </div>
 //       );
 //   }
 // }
-      
+
 // export default Comments;
-   
-import React from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import Axios from 'axios';
+
+import React from "react";
+import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
+import Axios from "axios";
 import "./styles.css";
-import {AuthUserContext, withAuthorization} from '../Session';
+import { AuthUserContext, withAuthorization } from "../Session";
 
 class Comments extends React.Component {
-state =  {
-  comment: ''
-}
+  state = {
+    comment: ""
+  };
 
-handleTyping =  (event) => {
-  event.preventDefault()
-this.setState({comment: event.target.value})
-}
+  handleTyping = event => {
+    event.preventDefault();
+    this.setState({ comment: event.target.value });
+  };
 
-saveComment = () => {
+  saveComment = () => {
+    Axios.post("/saveComment", { comment: this.state.comment }).then(data => {
+      console.log("we got this back from backedn!!", data);
+      this.setState({ comment: "" });
+    });
+  };
 
-  Axios.post('/saveComment', {comment: this.state.comment}).then((data) => {
-console.log('we got this back from backedn!!', data);
-this.setState({comment: ''})
-  })
+  render() {
+    console.log("comment state changing!!!", this.state);
 
-}
+    return (
+      <AuthUserContext.Consumer>
+        {authUser => (
+          <div>
+            <Form>
+              <FormGroup>
+                <Label for="exampleText">Give us your feedback.</Label>
+                <Input
+                  value={this.state.comment}
+                  type="textarea"
+                  name="text"
+                  id="exampleText"
+                  onChange={this.handleTyping}
+                />
+              </FormGroup>
+              {/* <Button>Submit</Button> */}
+            </Form>
 
-render () {
-
-  console.log('comment state changing!!!', this.state);
-
-  return (
-    <AuthUserContext.Consumer>
-    {authUser => (
-     <div>
-     <Form>
-     <FormGroup>
-       <Label for="exampleText">Give us your feedback.</Label>
-       <Input value={this.state.comment}type="textarea" name="text" id="exampleText" onChange={this.handleTyping} />
-     </FormGroup>
-       {/* <Button>Submit</Button> */}
-     </Form>
-
-     <button onClick={this.saveComment} >Save</button>
-    </div> 
-    )}
-  </AuthUserContext.Consumer>
+            <button onClick={this.saveComment}>Save</button>
+          </div>
+        )}
+      </AuthUserContext.Consumer>
       // <div>
       //   <Form>
       //   <FormGroup>
@@ -98,11 +101,11 @@ render () {
       //   </Form>
 
       //   <button onClick={this.saveComment} >Save</button>
-      //  </div> 
-      );
+      //  </div>
+    );
   }
 }
-      
+
 // export default Comments;
 
 const condition = authUser => !!authUser;
