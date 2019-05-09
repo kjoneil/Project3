@@ -2,7 +2,7 @@ import React from "react";
 import Model1 from "./quiz.js";
 import { withAuthorization } from "../component/Session/index.js";
 // import builtinModules from "../modules/modules";
-
+import "./css/Math.css";
 const MathPage = () => {
   var mathQuestions = [
     {
@@ -31,13 +31,14 @@ const MathPage = () => {
 
   return (
     <div>
-      <h2>Brainteaser!</h2>
-      <p>How many Blocks are there in this Picture?</p>
+      <div class="brainteaser">
+        <h2>Brainteaser!</h2>
+        <p>How many Blocks are there in this Picture?</p>
+      </div>
       <Model1 questions={mathQuestions} />
-      <br />
-      <div>
-        <h6>Answer</h6>
-        <p>9</p>
+      <div id="someDiv">
+        <p id="Answer">Scroll Here For Answer</p>
+        <span id="someElement">9</span>
       </div>
     </div>
   );

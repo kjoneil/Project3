@@ -29,8 +29,7 @@ const App = () => (
       <hr />
       <Route exact path={"/math"} component={MathPage} />
       <Route exact path={"/reading"} component={Reading} />
-      <Route exact path={"/landing"} component={Wuzzle} />
-
+      <Route exact path={"/landing"} component={LandingPage} />
 
       <Route exact path={ROUTES.LANDING} component={LandingPage} />
       <Route exact path={ROUTES.SIGN_UP} component={SignUpPage} />
