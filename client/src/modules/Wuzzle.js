@@ -2,15 +2,17 @@ import React from "react";
 import { Card, Button, CardTitle, CardText } from "reactstrap";
 import logo from "../component/Landing/noon-good.jpg";
 import photo from "../component/Landing/line-read-line.jpg";
-
+import "./css/Wuzzle.css";
 const Example = props => {
   return (
     <div>
       <div>
-        <p>Wuzzles are picture riddles that have a hidden meaning.</p>
-        <p>
-          The picture could be a catch phrase, common saying or compound word.
-        </p>
+        <div class="brainteasers">
+          <p>Wuzzles are picture riddles that have a hidden meaning.</p>
+          <p>
+            The picture could be a catch phrase, common saying or compound word.
+          </p>
+        </div>
       </div>{" "}
       <div className="wuzzle">
         <Card body inverse color="success">
@@ -27,11 +29,11 @@ const Example = props => {
       </div>
       <br />
       <br />
-      <div>
-        <h6>Answers</h6>
-        <br />
-        <p>Wuzzle #1: Good AfterNoon</p>
-        <p>Wuzzle #2: Read Between the lines</p>
+      <div id="someDiv">
+        <p id="Answer">Scroll Here For Answers</p>
+        <span id="someElement">
+          Wuzzle #1: Good AfterNoon, Wuzzle #2: Read Between the lines
+        </span>
       </div>
     </div>
   );

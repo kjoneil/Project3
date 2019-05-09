@@ -1,0 +1,20 @@
+#someElement {
+  border: 1px pink;
+  display: none;
+  font-size: 75px;
+  /* margin-top: 2px; */
+  /* padding: 2px; */
+  text-transform: uppercase;
+  /* size: 20px; */
+  color: greenyellow;
+}
+
+#someDiv:hover #someElement {
+  display: block;
+}
+#Answer {
+  font-size: 100 px;
+  color: white;
+  margin-top: 4mm;
+  font-weight: bold;
+}

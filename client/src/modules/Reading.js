@@ -2,7 +2,7 @@ import React from "react";
 import Quiz from "./quiz.js";
 import { withAuthorization } from "../component/Session/index.js";
 // import builtinModules from "../modules/modules";
-
+import "./css/Reading.css";
 const ReadingPage = () => {
   var readingQuestions = [
     {
@@ -33,13 +33,14 @@ const ReadingPage = () => {
 
   return (
     <div>
-      <h2>Brain Teasers!</h2>
-      <p>How many triangles are in the image below?</p>
+      <div class="brainteasers">
+        <h2>Brain Teasers!</h2>
+        <p>How many triangles are in the image below?</p>
+      </div>
       <Quiz questions={readingQuestions} />
-      <div>
-        <br />
-        <h6>Answer</h6>
-        <p>44</p>
+      <div id="someDiv">
+        <p id="Answer">Scroll Here For Answer</p>
+        <span id="someElement">44</span>
       </div>
     </div>
   );

@@ -31,20 +31,20 @@ const HomePage = () => {
     <div>
       <h2>Fun Activities</h2>
       {/* <Model1 questions={mathQuestions} /> */}
-      <p>Explore</p>
+      <p>Pick One:</p>
       <Link to="/math">
         <Button color="primary" size="lg" block>
-          <h2>BrainTeaser</h2>
+          <h2>BrainTeaser 1</h2>
         </Button>{" "}
       </Link>
       <Link to="/reading">
         <Button color="danger" size="lg" block>
-          <h2>BrainTeaser</h2>
+          <h2>BrainTeaser 2</h2>
         </Button>
       </Link>{" "}
       <Link to="/landing">
         <Button color="success" size="lg" block>
-          <h2>Wuzzles</h2>
+          <h2>BrainTease 3</h2>
         </Button>
       </Link>
     </div>
