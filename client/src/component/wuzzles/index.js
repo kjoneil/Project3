@@ -18,6 +18,7 @@ saveComment = () => {
 
   Axios.post('/saveComment', {comment: this.state.comment}).then((data) => {
 console.log('we got this back from backedn!!', data);
+this.setState({comment: ''})
   })
 
 }
@@ -32,8 +33,8 @@ render () {
      <div>
      <Form>
      <FormGroup>
-       <Label for="exampleText">Let us how fun our website is.</Label>
-       <Input type="textarea" name="text" id="exampleText" onChange={this.handleTyping} />
+       <Label for="exampleText">Give us your feedback.</Label>
+       <Input value={this.state.comment}type="textarea" name="text" id="exampleText" onChange={this.handleTyping} />
      </FormGroup>
        {/* <Button>Submit</Button> */}
      </Form>

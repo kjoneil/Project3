@@ -27,9 +27,9 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-// mongoose.connect(
-//   process.env.MONGODB_URI ||"mongodb://tomtomtom:123456tom@ds145146.mlab.com:45146/heroku_ml83mqkl"
-// )
+mongoose.connect(
+  process.env.MONGODB_URI ||"mongodb://tomtomtom:123456tom@ds145146.mlab.com:45146/heroku_ml83mqkl"
+)
 // mongoose.connect(
 //     process.env.MONGODB_URI ||"mongodb:"
 //   )
@@ -37,9 +37,9 @@ app.use(routes);
   
 //     process.env.MONGODB_URI || "mongodb+srv://admin-kevin:abcd123@cluster0-r9eig.mongodb.net/wonderbooksdb"
 //   );
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost:27017/wonderBooks"
-);
+// mongoose.connect(
+//   process.env.MONGODB_URI || "mongodb://localhost:27017/wonderBooks"
+// );
 
 // Start the API server
 app.listen(PORT, function() {
