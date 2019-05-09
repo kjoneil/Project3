@@ -33,7 +33,7 @@ class Comments extends React.Component {
       <div style={myStyle.containerStyle} className="form">
         <Form>
           <FormGroup>
-            <Label for="exampleText">Let us how fun our website is.</Label>
+            <Label for="exampleText">Let us know how fun our website is.</Label>
             <Input
               type="textarea"
               name="text"
