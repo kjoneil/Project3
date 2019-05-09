@@ -13,6 +13,7 @@ import AdminPage from "../Admin";
 import MathPage from "../../modules/Math.js";
 import Reading from "../../modules/Reading.js";
 import Wuzzle from "../../modules/Wuzzle.js";
+import CommentsPage from "../wuzzles/index.js";
 
 import * as ROUTES from "../../constants/routes";
 import { withAuthentication } from "../Session";
@@ -30,6 +31,7 @@ const App = () => (
       <Route exact path={"/math"} component={MathPage} />
       <Route exact path={"/reading"} component={Reading} />
       <Route exact path={"/landing"} component={Wuzzle} />
+      <Route exact path={"/Comments"} component={CommentsPage} />
 
 
       <Route exact path={ROUTES.LANDING} component={LandingPage} />
