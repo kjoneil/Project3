@@ -30,12 +30,15 @@ app.use(routes);
 mongoose.connect(
   process.env.MONGODB_URI ||"mongodb://tomtomtom:123456tom@ds145146.mlab.com:45146/heroku_ml83mqkl"
 )
+// mongoose.connect(
+//     process.env.MONGODB_URI ||"mongodb:"
+//   )
   // mongoose.connect(
   
 //     process.env.MONGODB_URI || "mongodb+srv://admin-kevin:abcd123@cluster0-r9eig.mongodb.net/wonderbooksdb"
 //   );
 // mongoose.connect(
-//   process.env.MONGODB_URI || "mongodb://localhost:27017/wonderBooks",{useNewUrlParser: true}
+//   process.env.MONGODB_URI || "mongodb://localhost:27017/wonderBooks"
 // );
 
 // Start the API server
