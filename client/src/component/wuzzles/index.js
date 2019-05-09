@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import Axios from 'axios';
+import "./styles.css";
 
 class Comments extends React.Component {
 state =  {
@@ -28,7 +29,7 @@ render () {
       <div>
         <Form>
         <FormGroup>
-          <Label for="exampleText">Let us how fun our website is.</Label>
+          <Label for="exampleText">Provide Feedback.</Label>
           <Input type="textarea" name="text" id="exampleText" onChange={this.handleTyping} />
         </FormGroup>
           {/* <Button>Submit</Button> */}

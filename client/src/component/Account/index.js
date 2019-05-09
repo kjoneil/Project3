@@ -14,7 +14,7 @@ const AccountPage = () => (
         <br />
         <PasswordForgetForm />
         <br />
-        <PasswordChangeForm />
+        {/* <PasswordChangeForm /> */}
         <br />
         <Comments />
       </div>
